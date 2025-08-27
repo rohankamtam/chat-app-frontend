@@ -13,7 +13,7 @@ const ChatPage = () => {
   const roomName = 'General';
 
   useEffect(() => {
-    const newSocket = io('https://back-chat-room.onrender.com');
+    const newSocket = io('https://chat-app-backend-aqvj.onrender.com');
     setSocket(newSocket);
     newSocket.emit('joinRoom', { roomName, user });
     newSocket.on('updateUserList', (userList) => {

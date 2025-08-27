@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'https://back-chat-room.onrender.com/api/users';
+const API_URL = 'https://chat-app-backend-aqvj.onrender.com/api/users/';
 
 // Register a new user
 const register = async (userData) => {

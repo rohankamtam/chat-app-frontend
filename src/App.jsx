@@ -13,6 +13,10 @@ function App() {
             // If user exists (is logged in)
             <>
               <span>Welcome, {user.name}!</span>
+              {' | '}
+              {/* --- ADD THIS LINK --- */}
+              <Link to="/chat">Go to Chat</Link>
+              {' | '}
               <button onClick={logout}>Logout</button>
             </>
           ) : (

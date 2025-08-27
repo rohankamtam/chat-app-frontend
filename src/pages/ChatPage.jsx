@@ -13,7 +13,9 @@ const ChatPage = () => {
   const roomName = 'General';
 
   useEffect(() => {
-    const newSocket = io('https://chat-app-backend-aqvj.onrender.com');
+    const newSocket = io('https://chat-app-backend-aqvj.onrender.com', {
+  transports: ['websocket'], // Force WebSocket, disable HTTP polling
+});
     setSocket(newSocket);
     newSocket.emit('joinRoom', { roomName, user });
     newSocket.on('updateUserList', (userList) => {
